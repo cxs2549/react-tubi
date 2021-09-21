@@ -50,14 +50,14 @@ const Menu = ({ open, links }) => {
 			open={open}
 			className="bg-gradient-to-r from-purple-700 via-pink-700 to-red-700 capitalize font-semibold text-base text-gray-200"
 		>
-			<div className="px-3 py-4 border-b border-gray-600">
+			<div className="px-3 py-4 border-b border-gray-400">
 				<Searchbar />
 			</div>
 			{links.map((link, i) => (
 				<div key={i}>
 					<div
 						onClick={handleClick}
-						className="flex relative items-center justify-between px-4 py-4 filter  hover:text-white transition-colors duration-200  cursor-pointer border-b border-gray-600"
+						className="flex relative items-center justify-between px-4 py-4 filter  hover:text-white transition-colors duration-200  cursor-pointer border-b border-gray-400"
 					>
 						<span>{link}</span>
 						{i === 0 && (
@@ -66,7 +66,6 @@ const Menu = ({ open, links }) => {
 							</div>
 						)}
 					</div>
-
 					{i === 0 &&
 					isOpen && (
 						<div className="text-base">
@@ -77,12 +76,11 @@ const Menu = ({ open, links }) => {
 								>
 									<div
 										onClick={() => handleSubs(link.name, i)}
-										className="px-4 hover:text-white transition-colors duration-200 flex  justify-between py-3 border-b border-gray-600   cursor-pointer"
+										className="px-4 hover:text-white transition-colors duration-200 flex  justify-between py-3 border-b border-gray-400   cursor-pointer"
 									>
 										<h4 className="">{link.name}</h4>
 										{/* sub chevron */}
 										<div
-											className="subchev"
 											id={`subchev-${i}`}
 											className={`transform  ${isOpenSub === link.name &&
 												'rotate-180'}`}
@@ -103,6 +101,7 @@ const Menu = ({ open, links }) => {
 												))}
 											</ul>
 										)}
+
 									</div>
 								</div>
 							))}

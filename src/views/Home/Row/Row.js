@@ -2,7 +2,10 @@ import styled from 'styled-components'
 
 const StyledRow = styled.div`
 	img {
-		min-width: 200px;
+		min-width: 140px;
+		@media (min-width: 768px) {
+			min-width: 180px;
+		}
 	}
     span {
         color: #818184;
@@ -21,12 +24,12 @@ const Row = ({ title, images }) => {
 							<img
 								src={img}
 								alt=""
-								className="cursor-pointer shadow rounded w-64 xl:w-64 opacity-80 hover:opacity-100"
+								className="cursor-pointer shadow rounded w-56 xl:w-64 opacity-70 hover:opacity-100 transition-opacity duration-200"
 							/>
 							<div className="py-2">
 								<div className="flex justify-between mb-1">
                                     <h4 className="capitalize font-medium">title</h4>
-                                    <div className="bg-gray-600 opacity-80  text-white px-2 flex items-center justify-center rounded font-medium text-xs">TV-14</div>
+                                    <div className="bg-gray-600 opacity-80  text-white px-2 flex items-center justify-center rounded font-semibold text-xs">TV-14</div>
                                 </div>
 								<div className="flex flex-col text-xs font-medium">
 									<span>(2010) 1hr 30min</span>
