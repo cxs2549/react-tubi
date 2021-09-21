@@ -13,6 +13,7 @@ const StyledMenu = styled.div`
 	border-top-right-radius: 8px;
 	overflow: hidden;
 	overflow-y: scroll;
+	z-index: 100;
 	svg {
 		font-size: 1.5rem;
 	}
@@ -95,7 +96,7 @@ const Menu = ({ open, links }) => {
 												{link.links.map((link, i) => (
 													<li
 														key={i}
-														className="px-8 py-3  hover:text-white transition-colors duration-200 cursor-pointer"
+														className="px-4 py-3  hover:text-white transition-colors duration-200 cursor-pointer"
 													>
 														{link}
 													</li>

@@ -14,12 +14,12 @@ const StyledFooter = styled.footer`background-color: #18181c;
 `
 const Footer = () => {
 	const links = [
-		{ name: 'company', links: [ 'item1', 'item2', 'item3', 'item4' ] },
-		{ name: 'support', links: [ 'item1', 'item2', 'item3', 'item4' ] },
-		{ name: 'partners', links: [ 'item1', 'item2', 'item3', 'item4' ] },
-		{ name: 'get the apps', links: [ 'item1', 'item2', 'item3', 'item4' ] },
-		{ name: 'press', links: [ 'item1', 'item2', 'item3', 'item4' ] },
-		{ name: 'legal', links: [ 'item1', 'item2', 'item3', 'item4' ] }
+		{ name: 'company', links: [ 'about us', 'careers', 'contact' ] },
+		{ name: 'support', links: [ 'contact support', 'help center', 'supported devices', 'activate your device' ] },
+		{ name: 'partners', links: [ 'advertise with us', 'partner with us' ] },
+		{ name: 'get the apps', links: [ 'iOS', 'android', 'roku', 'amazon fire' ] },
+		{ name: 'press', links: [ 'press release', 'tubi in the news' ] },
+		{ name: 'legal', links: [ 'privacy policy', 'terms of use', 'do not sell my personal information'] }
 	]
 	const socials = [
 		<AiOutlineFacebook />,
@@ -30,20 +30,20 @@ const Footer = () => {
 	return (
 		<StyledFooter className="lg:col-span-2 w-full">
 			<div className="w-full max-w-6xl mx-auto px-4 xl:px-0 py-8">
-				<div className="flex items-center justify-between border-b pb-8">
+				<div className="flex items-center justify-between border-b border-gray-800 pb-8">
 					<img src={logo} className="w-20 filter invert" alt="" />
 					<div id="socials" className="flex gap-4">
                         {socials.map((social, i) => (
-                            <div key={i}>{social}</div>
+                            <div key={i} className="cursor-pointer">{social}</div>
                         ))}
                     </div>
 				</div>
-				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 py-8 border-b">
+				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 py-8 border-b border-gray-800">
 					{links.map((link, i) => (
 						<ul key={i}>
 							<h4 className="mb-3 uppercase font-semibold text-xs">{link.name}</h4>
 							{link.links.map((link, i) => (
-								<li key={i} className="capitalize py-1 text-sm">
+								<li key={i} className="capitalize py-1 text-sm hover:underline cursor-pointer">
 									{link}
 								</li>
 							))}

@@ -25,3 +25,8 @@ main {
 .freeze-flow {
 	overflow: hidden;
 }
+
+.headroom-wrapper {
+	position: relative;
+	z-index: 1000;
+}

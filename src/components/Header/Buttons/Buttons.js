@@ -21,17 +21,17 @@ svg {
         min-height: 40px;
         max-height: 40px;
 		&:first-of-type {
-			background: #fff;
+			/* background: #fff; */
 			mix-blend-mode: screen;
 		}
 	}
 `
 const Buttons = () => {
 	return (
-		<StyledButtons className="flex items-center gap-2 md:gap-3 text-sm">
+		<StyledButtons className="flex items-center gap-2 md:gap-3 text-sm xl:text-base">
             <FiSearch />
-			<button className="text-gray-600">register</button>
-			<button className="border-2">sign in</button>
+			<button className="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 shadow">register</button>
+			<button className="border-2 shadow">sign in</button>
 		</StyledButtons>
 	)
 }
